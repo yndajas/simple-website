@@ -13,9 +13,27 @@ body {
   background-color: var(--colour-pink-chintz);
 }
 
-section {
+header {
   max-width: 50rem;
-  margin: 1rem auto;
+  margin: 0 auto;
+}
+
+header img {
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+}
+
+main {
+  max-width: 50rem;
+  margin: 0 auto;
+}
+
+section {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   padding: 2rem;
 
   background-color: var(--colour-candy-dreams);
