@@ -1,4 +1,5 @@
 :root {
+  --colour-violet-blue: oklch(41.72% 0.232 287.78);
   --colour-violet-heaven: oklch(82.87% 0.092 302.31);
   --colour-candy-dreams: oklch(82.73% 0.091 322.1);
   --colour-pink-chintz: oklch(85.31% 0.064 354.71);
@@ -40,4 +41,11 @@ ol[role="list"] li {
 
   background-color: var(--colour-workout-routine);
   border-radius: 1rem;
+}
+
+a {
+  font-weight: 500;
+  color: var(--colour-violet-blue);
+  text-decoration-color: var(--colour-violet-blue);
+  text-decoration-style: wavy;
 }
