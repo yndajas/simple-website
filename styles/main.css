@@ -14,8 +14,7 @@ body {
 
 section {
   max-width: 50rem;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin: 1rem auto;
   padding: 2rem;
 
   background-color: var(--colour-candy-dreams);
