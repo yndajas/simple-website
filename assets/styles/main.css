@@ -64,10 +64,21 @@ ol[role="list"] li {
 }
 
 a {
-  font-weight: 500;
-  color: var(--colour-violet-blue);
   text-decoration-color: var(--colour-violet-blue);
-  text-decoration-style: wavy;
+  text-decoration-thickness: 0.15rem;
+  transition: color 0.25s ease-out;
+}
+
+a,
+a:visited {
+  color: inherit;
+}
+
+a:active,
+a:focus,
+a:focus-within,
+a:hover {
+  color: var(--colour-violet-blue);
 }
 
 footer p:not(:first-child) {
