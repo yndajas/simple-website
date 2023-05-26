@@ -5,41 +5,45 @@
   --colour-pink-chintz: oklch(85.31% 0.064 354.71);
   --colour-aromatic-breeze: oklch(89.81% 0.053 29.63);
   --colour-workout-routine: oklch(89.27% 0.105 81.54);
+  --spacing-standard: 1rem;
+  --spacing-max-container-width: 50rem;
 }
 
 body {
-  padding: 1rem;
+  padding: var(--spacing-standard);
   font-family: sans-serif;
   background-color: var(--colour-pink-chintz);
 }
 
 header {
-  max-width: 50rem;
+  max-width: var(--spacing-max-container-width);
   margin: 0 auto;
 }
 
 header img {
-  margin: 0 auto;
+  margin: var(--spacing-standard) auto;
 }
 
 h1 {
+  margin-top: var(--spacing-standard);
+  margin-bottom: var(--spacing-standard);
   text-align: center;
 }
 
 header,
 main,
 footer {
-  max-width: 50rem;
+  max-width: var(--spacing-max-container-width);
   margin: 0 auto;
 }
 
 section {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  padding: 2rem;
+  margin-top: var(--spacing-standard);
+  margin-bottom: var(--spacing-standard);
+  padding: calc(var(--spacing-standard) * 2);
 
   background-color: var(--colour-candy-dreams);
-  border-radius: 1rem;
+  border-radius: var(--spacing-standard);
 }
 
 p,
@@ -55,12 +59,12 @@ ol[role="list"] {
 ul[role="list"] li,
 ol[role="list"] li {
   width: fit-content;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  padding: 1rem;
+  margin-top: var(--spacing-standard);
+  margin-bottom: var(--spacing-standard);
+  padding: var(--spacing-standard);
 
   background-color: var(--colour-workout-routine);
-  border-radius: 1rem;
+  border-radius: var(--spacing-standard);
 }
 
 a {
@@ -81,6 +85,6 @@ a:hover {
   color: var(--colour-violet-blue);
 }
 
-footer p:not(:first-child) {
-  margin-top: 1rem;
+footer p {
+  margin: var(--spacing-standard);
 }
