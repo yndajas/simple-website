@@ -15,26 +15,17 @@ body {
   background-color: var(--colour-pink-chintz);
 }
 
-header {
+header,
+main,
+footer {
   max-width: var(--spacing-max-container-width);
   margin: 0 auto;
-}
-
-img {
-  margin: var(--spacing-standard) auto;
 }
 
 h1 {
   margin-top: var(--spacing-standard);
   margin-bottom: var(--spacing-standard);
   text-align: center;
-}
-
-header,
-main,
-footer {
-  max-width: var(--spacing-max-container-width);
-  margin: 0 auto;
 }
 
 section {
@@ -83,6 +74,10 @@ a:focus,
 a:focus-within,
 a:hover {
   color: var(--colour-violet-blue);
+}
+
+img {
+  margin: var(--spacing-standard) auto;
 }
 
 footer p {
