@@ -1,3 +1,44 @@
-ul {
+:root {
+  --colour-violet-heaven: oklch(82.87% 0.092 302.31);
+  --colour-candy-dreams: oklch(82.73% 0.091 322.1);
+  --colour-pink-chintz: oklch(85.31% 0.064 354.71);
+  --colour-aromatic-breeze: oklch(89.81% 0.053 29.63);
+  --colour-workout-routine: oklch(89.27% 0.105 81.54);
+}
+
+body {
+  padding: 1rem;
+  font-family: sans-serif;
+  background-color: var(--colour-pink-chintz);
+}
+
+section {
+  max-width: 50rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 2rem;
+
+  background-color: var(--colour-candy-dreams);
+  border-radius: 1rem;
+}
+
+p,
+li {
   max-width: 80ch;
+}
+
+ul[role="list"],
+ol[role="list"] {
+  padding: 0;
+}
+
+ul[role="list"] li,
+ol[role="list"] li {
+  width: fit-content;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+
+  background-color: var(--colour-workout-routine);
+  border-radius: 1rem;
 }
