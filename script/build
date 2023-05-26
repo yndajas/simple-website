@@ -1,0 +1,33 @@
+#!/bin/sh
+
+# script/build: Compile the HTML and build the app for CI/CD deployment.
+
+set -e
+
+script/update
+
+echo "==> Cleaning build directory"
+
+rm -rf _site
+mkdir _site
+
+echo "==> Compiling HTML"
+
+for VIEW_FILEPATH in views/*.html
+do
+  FILENAME=$(echo "$VIEW_FILEPATH" | awk '{print substr($0, 7)}')
+  echo "Compiling _site/$FILENAME"
+  cat views/layout/pre.html "$VIEW_FILEPATH" views/layout/post.html > "_site/$FILENAME"
+done
+
+echo "==> Formatting HTML"
+
+npx prettier --write _site/**/*.html
+
+echo "==> Copying assets"
+
+cp -r assets _site/assets
+
+echo "==> Formatting CSS"
+
+npx stylelint --fix "_site/assets/styles/*.css"

@@ -3,6 +3,7 @@
     "node": ">=20.2.0"
   },
   "devDependencies": {
+    "prettier": "^2.8.8",
     "stylelint": "^15.6.2",
     "stylelint-config-clean-order": "^5.0.1",
     "stylelint-config-standard": "^33.0.0"
