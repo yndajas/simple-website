@@ -38,6 +38,7 @@ echo "==> Compiling HTML"
 
 for VIEW_FILEPATH in views/*.html
 do
+  FILENAME=$(echo "$VIEW_FILEPATH" | awk '{print substr($0, 7)}')
   echo "Compiling _site/$FILENAME"
   cat views/layout/pre.html "$VIEW_FILEPATH" views/layout/post.html > "_site/$FILENAME"
 done
@@ -53,5 +54,4 @@ cp -r assets _site/assets
 echo "==> Formatting CSS"
 
 npx stylelint --fix "_site/assets/styles/*.css"
-
 echo "Completed build"
