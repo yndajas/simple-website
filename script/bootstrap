@@ -5,6 +5,22 @@
 
 set -e
 
+CI=false
+
+for ARG in "$@"
+do
+  case $ARG in
+    --ci-environment)
+      CI=true
+      ;;
+  esac
+  shift
+done
+
 echo "==> Installing dependencies"
+
+if [ "$CI" = false ]; then
+  nodenv install --skip-existing
+fi
 
 npm install

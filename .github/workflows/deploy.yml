@@ -30,7 +30,7 @@ jobs:
       - name: Check out
         uses: actions/checkout@v3
       - name: Build
-        run: script/build
+        run: script/build --ci-environment
       - name: Set up Pages
         uses: actions/configure-pages@v3
       - name: Upload Pages artifact

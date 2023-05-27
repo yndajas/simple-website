@@ -6,6 +6,7 @@
 set -e
 
 UPDATE=true
+CI=false
 
 for ARG in "$@"
 do
@@ -13,12 +14,19 @@ do
     --skip-update)
       UPDATE=false
       ;;
+    --ci-environment)
+      CI=true
+      ;;
   esac
   shift
 done
 
 if [ "$UPDATE" = true ]; then
-  script/update
+  if [ "$CI" = true ]; then
+    script/update --ci-environment
+  else
+    script/update
+  fi
 fi
 
 echo "==> Cleaning build directory"
