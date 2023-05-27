@@ -14,5 +14,15 @@ collections:
     create: true
     fields:
       - { label: Title, name: title, widget: string, required: true }
-      - { label: Date, name: date, widget: string, required: true }
+      - {
+          label: Date,
+          name: date,
+          widget: string,
+          required: true,
+          pattern:
+            [
+              '^\d{4}\-(0[1-9]|1[012])\-(0[1-9]|[12][0-9]|3[01])$',
+              "Must be in the format YYYY-MM-DD",
+            ],
+        }
       - { label: Body, name: body, widget: markdown, required: true }
