@@ -43,6 +43,12 @@ do
   cat views/layout/pre.html "$VIEW_FILEPATH" views/layout/post.html > "_site/$FILENAME"
 done
 
+echo "==> Copying admin config"
+
+mkdir _site/admin
+
+cp -r views/admin _site
+
 echo "==> Formatting HTML"
 
 npx prettier --write _site/**/*.html
