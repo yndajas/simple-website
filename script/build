@@ -1,10 +1,25 @@
 #!/bin/sh
 
-# script/build: Compile the HTML and build the app for CI/CD deployment.
+# script/build: Compile the HTML and build the app to serve locally or deploy
+#               via CI/CD.
 
 set -e
 
-script/update
+UPDATE=true
+
+for ARG in "$@"
+do
+  case $ARG in
+    --skip-update)
+      UPDATE=false
+      ;;
+  esac
+  shift
+done
+
+if [ "$UPDATE" = true ]; then
+  script/update
+fi
 
 echo "==> Cleaning build directory"
 
@@ -31,3 +46,5 @@ cp -r assets _site/assets
 echo "==> Formatting CSS"
 
 npx stylelint --fix "_site/assets/styles/*.css"
+
+echo "Completed build"
