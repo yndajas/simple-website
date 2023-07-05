@@ -4,7 +4,7 @@
   },
   "devDependencies": {
     "http-server": "^14.1.1",
-    "prettier": "^2.8.8",
+    "prettier": "^3.0.0",
     "stylelint": "^15.6.2",
     "stylelint-config-clean-order": "^5.0.1",
     "stylelint-config-standard": "^34.0.0"
