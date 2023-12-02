@@ -21,6 +21,7 @@ echo "==> Installing dependencies"
 
 if [ "$CI" = false ]; then
   nodenv install --skip-existing
+  brew bundle install
 fi
 
 npm install
