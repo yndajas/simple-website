@@ -1,6 +1,6 @@
 {
   "engines": {
-    "node": ">=20.2.0"
+    "node": ">=20.10.0"
   },
   "devDependencies": {
     "http-server": "^14.1.1",
@@ -8,8 +8,5 @@
     "stylelint": "^15.6.2",
     "stylelint-config-clean-order": "^5.0.1",
     "stylelint-config-standard": "^34.0.0"
-  },
-  "overrides": {
-    "semver": ">=7.5.3"
   }
 }
