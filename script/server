@@ -9,4 +9,4 @@ script/build
 
 echo "==> Starting server and watching for file changes in assets and views"
 
-(trap 'kill 0' SIGINT; npx http-server _site & (fswatch -or assets views | xargs -n1 -I{} script/build --skip-update))
+(trap 'kill 0' SIGINT; bun --bun x http-server _site & (fswatch -or assets views | xargs -n1 -I{} script/build --skip-update))

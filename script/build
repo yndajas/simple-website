@@ -51,7 +51,7 @@ cp -r views/admin _site
 
 echo "==> Formatting HTML"
 
-bun x prettier --write _site/**/*.html
+bun --bun x prettier --write _site/**/*.html
 
 echo "==> Copying assets"
 
@@ -59,6 +59,6 @@ cp -r assets _site/assets
 
 echo "==> Formatting CSS"
 
-bun x stylelint --fix "_site/assets/styles/*.css"
+bun --bun x stylelint --fix "_site/assets/styles/*.css"
 
 echo "Completed build"
