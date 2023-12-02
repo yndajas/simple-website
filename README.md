@@ -34,9 +34,11 @@ content I have on there over (mostly blog posts)
 
 ## To do
 
+- mention game dev
+- add page on game dev projects
 - migrate blog posts and compile Markdown
 - flesh out pages on writing and Japanese language resources
-- possibly add a page on coding projects
+- add a page on coding projects: just personal or something about professional work too?
 - add Flatiron and CS50 to "Things that once were"
 - add header navigation
 - flesh out footer - contact links, licence etc
