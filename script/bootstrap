@@ -20,7 +20,9 @@ done
 echo "==> Installing dependencies"
 
 if [ "$CI" = false ]; then
-  nodenv install --skip-existing
+  echo "==> Installing Homebrew packages: Bun and fswatch..."
+  brew bundle install
 fi
 
-npm install
+echo "==> Installing Bun dependencies"
+bun install
