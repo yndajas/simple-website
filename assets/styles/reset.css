@@ -5,7 +5,12 @@
   box-sizing: border-box;
 }
 
-/* Remove default margin */
+/* Prevent font size inflation */
+html {
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
 body,
 h1,
 h2,
@@ -34,11 +39,19 @@ html:focus-within {
 body {
   min-height: 100vh;
   line-height: 1.5;
-  text-rendering: optimizespeed;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
 }
 
 /* A elements that don't have a class get default styles */
 a:not([class]) {
+  color: currentcolor;
   text-decoration-skip-ink: auto;
 }
 
@@ -55,6 +68,16 @@ button,
 textarea,
 select {
   font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
 }
 
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
