@@ -1,7 +1,4 @@
 {
-  "engines": {
-    "node": ">=20.10.0"
-  },
   "devDependencies": {
     "http-server": "^14.1.1",
     "prettier": "^3.0.0",
