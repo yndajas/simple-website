@@ -1,0 +1,32 @@
+#!/bin/sh
+set -e
+
+# script/test: Run the test suite for the application.
+
+set -e
+
+CI=false
+
+for ARG in "$@"
+do
+  case $ARG in
+    --ci-environment)
+      CI=true
+      ;;
+  esac
+  shift
+done
+
+if [ "$CI" = true ]; then
+  script/build --ci-environment
+else
+  script/build
+fi
+
+echo "==> Installing browsers for the end-to-end tests"
+
+npx playwright install chromium
+
+echo "==> Running the end-to-end tests"
+
+npx playwright test
