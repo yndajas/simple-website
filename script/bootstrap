@@ -19,10 +19,17 @@ done
 
 echo "==> Installing dependencies"
 
-if [ "$CI" = false ]; then
+if [ "$CI" = true ]; then
+  echo "==> Installing Node dependencies..."
+
+  npm ci
+else
   echo "==> Installing Node and fswatch if needed..."
+
   nodenv install --skip-existing
   brew bundle install
-fi
 
-npm install
+  echo "==> Installing Node dependencies..."
+
+  npm install
+fi
