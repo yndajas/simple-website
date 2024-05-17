@@ -5,8 +5,31 @@
 
 set -e
 
-script/build
+CI=false
 
-echo "==> Starting server and watching for file changes in assets and views"
+for ARG in "$@"
+do
+  case $ARG in
+    --ci-environment)
+      CI=true
+      ;;
+  esac
+  shift
+done
 
-(trap 'kill 0' SIGINT; npx http-server _site & (fswatch -or assets views | xargs -n1 -I{} script/build --skip-update))
+if [ "$CI" = true ]; then
+  script/build --ci-environment
+else
+  script/build
+fi
+
+
+if [ "$CI" = true ]; then
+  echo "==> Starting server"
+
+  npx http-server _site
+else
+  echo "==> Starting server and watching for file changes in assets and views"
+
+  (trap 'kill 0' SIGINT; npx http-server _site & (fswatch -or assets views | xargs -n1 -I{} script/build --skip-update))
+fi
