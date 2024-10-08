@@ -10,6 +10,12 @@
     ":automergeRequireAllStatusChecks",
     ":automergeTesters"
   ],
+  "packageRules": [
+    {
+      "dependencyDashboardApproval": false,
+      "matchUpdateTypes": ["major"]
+    }
+  ],
   "labels": [
     "dependencies"
   ]
