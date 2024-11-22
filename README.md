@@ -79,9 +79,8 @@ The layout, including the `head` and `footer`, can be updated in the
 
 ### Images
 
-All images are dithered using [Dither it!][3], except the one at the top of the
-homepage, which is already lightweight. The dithering both reduces the file size
-and provides a consistent aesthetic across images with very different origins
+All images are dithered using [Dither it!][3]. The dithering both reduces the file
+size and provides a consistent aesthetic across images with very different origins
 
 ### Styles and colour palette
 
