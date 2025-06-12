@@ -14,7 +14,7 @@ test('index page renders correctly', async ({ page }) => {
     "Things that are trival"
   ]);
   await expect(page.locator("img")).toHaveCount(5);
-  await expect(page.locator("footer p")).toHaveCount(3);
+  await expect(page.locator("footer p")).toHaveCount(2);
 });
 
 test('Nihongo page renders correctly', async ({ page }) => {
@@ -23,7 +23,7 @@ test('Nihongo page renders correctly', async ({ page }) => {
   await expect(page).toHaveTitle("Ynda Jas");
   await expect(page.locator("h1")).toHaveText("My Japanese language learning resources");
   await expect(page.locator("main p")).toHaveText("List to follow");
-  await expect(page.locator("footer p")).toHaveCount(3);
+  await expect(page.locator("footer p")).toHaveCount(2);
 });
 
 test('writing page renders correctly', async ({ page }) => {
@@ -35,5 +35,5 @@ test('writing page renders correctly', async ({ page }) => {
     "Links to writings elsewhere",
     "Blog posts"
   ]);
-  await expect(page.locator("footer p")).toHaveCount(3);
+  await expect(page.locator("footer p")).toHaveCount(2);
 });
