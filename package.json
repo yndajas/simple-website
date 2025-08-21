@@ -1,11 +1,11 @@
 {
   "devDependencies": {
-    "@playwright/test": "^1.44.0",
-    "@types/node": "^22.0.0",
-    "http-server": "^14.1.1",
-    "prettier": "^3.0.0",
-    "stylelint": "^16.0.2",
-    "stylelint-config-clean-order": "^7.0.0",
-    "stylelint-config-standard": "^39.0.0"
+    "@playwright/test": "1.55.0",
+    "@types/node": "22.17.2",
+    "http-server": "14.1.1",
+    "prettier": "3.6.2",
+    "stylelint": "16.23.1",
+    "stylelint-config-clean-order": "7.0.0",
+    "stylelint-config-standard": "39.0.0"
   }
 }
