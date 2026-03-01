@@ -6,6 +6,6 @@
     "prettier": "3.8.1",
     "stylelint": "16.26.1",
     "stylelint-config-clean-order": "8.0.1",
-    "stylelint-config-standard": "39.0.1"
+    "stylelint-config-standard": "40.0.0"
   }
 }
