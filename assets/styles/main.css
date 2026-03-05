@@ -42,6 +42,11 @@ li {
   max-width: 80ch;
 }
 
+main > p,
+footer p {
+  margin: var(--spacing-standard);
+}
+
 ul[role="list"],
 ol[role="list"] {
   padding: 0;
@@ -78,8 +83,4 @@ a:hover {
 
 img {
   margin: var(--spacing-standard) auto;
-}
-
-footer p {
-  margin: var(--spacing-standard);
 }
