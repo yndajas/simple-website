@@ -43,7 +43,8 @@ li {
 }
 
 main > p,
-footer p {
+footer p,
+header nav p {
   margin: var(--spacing-standard);
 }
 
