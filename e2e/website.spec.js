@@ -33,9 +33,6 @@ test("writing page renders correctly", async ({ page }) => {
 
   await expect(page).toHaveTitle("Ynda Jas (they/she)");
   await expect(page.locator("h1")).toHaveText("Things I've written");
-  await expect(page.locator("main p")).toHaveText([
-    "Links to writings elsewhere",
-    "Blog posts",
-  ]);
+  await expect(page.locator("h2")).toHaveText(["Prose", "Poetry"]);
   await expect(page.locator("footer p")).toHaveCount(2);
 });
