@@ -41,6 +41,16 @@ do
   FILENAME=$(echo "$VIEW_FILEPATH" | awk '{print substr($0, 7)}')
   echo "Compiling _site/$FILENAME"
   cat views/layout/pre.html "$VIEW_FILEPATH" views/layout/post.html > "_site/$FILENAME"
+
+  if [ "$FILENAME" != 'index.html' ]; then
+    TITLE_PREFIX=$(echo "$FILENAME" | cut -c1 | tr a-z A-Z)$(echo "$FILENAME" | cut -c2- | sed -r 's/\..*//')
+
+    if [ "$(uname)" = 'Darwin' ]; then
+      sed -r -i '' "s/(<title>)/\1$TITLE_PREFIX - /" "_site/$FILENAME"
+    else
+      sed -r -i "s/(<title>)/\1$TITLE_PREFIX - /" "_site/$FILENAME"
+    fi
+  fi
 done
 
 echo "==> Copying admin config"

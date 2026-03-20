@@ -20,7 +20,7 @@ test("index page renders correctly", async ({ page }) => {
 test("Nihongo page renders correctly", async ({ page }) => {
   await page.goto("/nihongo");
 
-  await expect(page).toHaveTitle("Ynda Jas (they/she)");
+  await expect(page).toHaveTitle("Nihongo - Ynda Jas (they/she)");
   await expect(page.locator("h1")).toHaveText(
     "My Japanese language learning resources",
   );
@@ -31,7 +31,7 @@ test("Nihongo page renders correctly", async ({ page }) => {
 test("writing page renders correctly", async ({ page }) => {
   await page.goto("/writing");
 
-  await expect(page).toHaveTitle("Ynda Jas (they/she)");
+  await expect(page).toHaveTitle("Writing - Ynda Jas (they/she)");
   await expect(page.locator("h1")).toHaveText("Things I've written");
   await expect(page.locator("h2")).toHaveText(["Prose", "Poetry"]);
   await expect(page.locator("footer p")).toHaveCount(2);
