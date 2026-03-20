@@ -1,12 +1,14 @@
 name: Deploy
 
 on:
-  push:
+  workflow_dispatch:
+  workflow_run:
+    workflows:
+      - CI
+    types:
+      - completed
     branches:
       - main
-
-  # allow manual workflow run from actions tab
-  workflow_dispatch:
 
 permissions:
   contents: read
