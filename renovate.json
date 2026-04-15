@@ -10,6 +10,7 @@
     ":automergeTesters",
     ":combinePatchMinorReleases"
   ],
+  "minimumReleaseAge": "3 days",
   "packageRules": [
     {
       "dependencyDashboardApproval": false,
