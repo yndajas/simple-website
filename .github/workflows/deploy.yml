@@ -34,6 +34,8 @@ jobs:
     steps:
       - name: Check out
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          ref: ${{ github.event.workflow_run.head_sha || github.ref }}
       - name: Build
         run: script/build --ci-environment
       - name: Set up Pages
