@@ -1,7 +1,7 @@
 {
   "devDependencies": {
     "@playwright/test": "1.65.1",
-    "@types/node": "26.6.7",
+    "@types/node": "26.6.10",
     "http-server": "14.1.1",
     "prettier": "3.10.1",
     "stylelint": "17.16.0",
